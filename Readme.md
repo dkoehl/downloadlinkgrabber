@@ -19,6 +19,6 @@ You can change the category by changing the categorie-number on `$baseURLwithCat
 
 
 ### Contact
-for more infos contact me `@pmnewmedia`
+for more infos contact me: `@pmnewmedia`
 
 
