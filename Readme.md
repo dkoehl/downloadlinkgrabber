@@ -9,3 +9,8 @@
 ## Possible options
 * `Changing categories with changing the number on $baseURLwithCategory`
 
+
+### Contact
+for more infos contact me `@pmnewmedia`
+
+
