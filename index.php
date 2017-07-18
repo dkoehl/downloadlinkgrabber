@@ -5,7 +5,6 @@ $baseURLwithCategory        = 'http://ebook-hell.to/?cat=53&start=';
 $resultFile                 = 'result.txt';
 
 $newLinkCounter             = 0;
-$oldLinkCounter             = 0;
 
 if (!is_file($resultFile)) {
     file_put_contents($resultFile, '');
@@ -17,11 +16,10 @@ for ($i = 1; $i <= 10; $i++) {
     foreach ($doc->getElementsByTagName('a') as $tag) {
         if ($tag->nodeValue == 'Download') {
             if (in_array($baseURL . $tag->getAttribute('href') . PHP_EOL, $resultFileContent)) {
-                $oldLinkCounter++;
                 continue;
             }
-            $newLinkCounter++;
             file_put_contents($resultFile, $baseURL . $tag->getAttribute('href') . PHP_EOL, FILE_APPEND);
+            $newLinkCounter++;
         }
     }
 }
