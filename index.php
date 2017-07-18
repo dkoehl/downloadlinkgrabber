@@ -7,14 +7,16 @@ $resultFile                 = 'result.txt';
 $newLinkCounter             = 0;
 $oldLinkCounter             = 0;
 
-$resultFileContent = @file_get_contents($resultFile);
-$oldLinkFileCounter = explode(PHP_EOL, trim($resultFileContent));
+if (!is_file($resultFile)) {
+    file_put_contents($resultFile, '');
+}
+$resultFileContent = file($resultFile);
 for ($i = 1; $i <= 10; $i++) {
     $doc = new DOMDocument();
     @$doc->loadHTMLFile($baseURLwithCategory . $i);
     foreach ($doc->getElementsByTagName('a') as $tag) {
         if ($tag->nodeValue == 'Download') {
-            if (strstr($resultFileContent, $baseURL . $tag->getAttribute('href') . PHP_EOL)) {
+            if (in_array($baseURL . $tag->getAttribute('href') . PHP_EOL, $resultFileContent)) {
                 $oldLinkCounter++;
                 continue;
             }
@@ -23,8 +25,8 @@ for ($i = 1; $i <= 10; $i++) {
         }
     }
 }
-$incomingLinkCounts = count($oldLinkFileCounter);
+$incomingLinkCounts = count($resultFileContent);
 echo ':::: Result ::::' . PHP_EOL;
-echo ':: Incoming: ' . $incomingLinkCounts . PHP_EOL;
+echo '::  Incoming: ' . $incomingLinkCounts . PHP_EOL;
 echo ':: New-Links: ' . $newLinkCounter . PHP_EOL;
 echo ':: All Links: ' . ($incomingLinkCounts + $newLinkCounter) . PHP_EOL;
