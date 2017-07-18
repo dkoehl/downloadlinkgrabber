@@ -1,4 +1,4 @@
-# Ebook Hell - Ebook link grabber
+# Website- Downloadlink grabber
 This little script will get you link from the ebook page. there is no downloading integrated or something else, this script works only with text links.
 If you want to download or steal ebooks, you are not allowed to use this script. 
 This script is only for the fun of it. 
