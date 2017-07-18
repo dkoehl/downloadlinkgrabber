@@ -7,7 +7,7 @@ $resultFile                 = 'result.txt';
 $newLinkCounter             = 0;
 $oldLinkCounter             = 0;
 
-$resultFileContent = file_get_contents($resultFile);
+$resultFileContent = @file_get_contents($resultFile);
 $oldLinkFileCounter = explode(PHP_EOL, trim($resultFileContent));
 for ($i = 1; $i <= 10; $i++) {
     $doc = new DOMDocument();
