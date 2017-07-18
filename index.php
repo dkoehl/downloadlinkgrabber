@@ -4,9 +4,9 @@ getPageData();
 
 function getPageData()
 {
-    $resultFile                 = 'result.txt';
     $baseURL                    = 'http://ebook-hell.to';
     $baseURLwithCategory        = 'http://ebook-hell.to/?cat=53&start=';
+    $resultFile                 = 'result.txt';
 
     $newLinkCounter             = 0;
     $oldLinkCounter             = 0;

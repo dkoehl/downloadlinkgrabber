@@ -1,6 +1,11 @@
-# Ebooklink Grabber
+# Ebook Hell - Ebook link grabber
 
-## What it does
-* this script checks external ebook page for download links and saves in txt file.
+## Configuration
+* `$baseURL: URL of the external page`
+* `$baseURLwithCategory: whole URL of the external page`
+* `$resultFile: file for saving incoming links`
 
+
+## Possible options
+* `Changing categories with changing the number on $baseURLwithCategory`
 
