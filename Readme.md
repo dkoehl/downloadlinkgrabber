@@ -1,4 +1,7 @@
 # Ebook Hell - Ebook link grabber
+This little script will get you link from the ebook page. there is no downloading integrated or something else, this script works only with text links.
+If you want to download, publish or steal ebooks, don´t use this script. 
+This script is only for the fun of it. 
 
 ## Configuration
 * $baseURL:             `URL of the external page`
