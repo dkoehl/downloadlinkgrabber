@@ -1,13 +1,18 @@
 # Ebook Hell - Ebook link grabber
 
 ## Configuration
-* `$baseURL: URL of the external page`
-* `$baseURLwithCategory: whole URL of the external page`
-* `$resultFile: file for saving incoming links`
+* $baseURL:             `URL of the external page`
+* $baseURLwithCategory: `whole URL of the external page`
+* $resultFile:          `file for saving incoming links`
+
+## How to run the script
+* open your terminal
+* type: `php index.php`
+* just wait some seconds for the result
 
 
-## Possible options
-* `Changing categories with changing the number on $baseURLwithCategory`
+## Hint
+You can change the category by changing the categorie-number on `$baseURLwithCategory`
 
 
 ### Contact
