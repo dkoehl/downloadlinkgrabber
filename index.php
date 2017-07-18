@@ -23,8 +23,7 @@ for ($i = 1; $i <= 10; $i++) {
         }
     }
 }
-$incomingLinkCounts = count($resultFileContent);
 echo ':::: Result ::::' . PHP_EOL;
-echo '::  Incoming: ' . $incomingLinkCounts . PHP_EOL;
+echo '::  Incoming: ' . count($resultFileContent) . PHP_EOL;
 echo ':: New-Links: ' . $newLinkCounter . PHP_EOL;
-echo ':: All Links: ' . ($incomingLinkCounts + $newLinkCounter) . PHP_EOL;
+echo ':: All Links: ' . (count($resultFileContent) + $newLinkCounter) . PHP_EOL;
